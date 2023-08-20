@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #f2c14E;
+    --background: #37505c;
+    --main: #2d414b;
+}
+
+/**
+//https://colorhunt.co/
+--orange: #f2c14E;
+    --background: #37505c;
+    --main: #2d414b;
+**/
+
+body {
+    font-family: 'Finger Paint', cursive;
+    height: 100vh;
+    width: 100%;
+    background: var(--background);
+    color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continer {
+    width: 450px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.continer h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.Btn {
+    background-color: var(--orange);
+    color: var(--background);
+    padding: 6px;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 8px;
+    
+}
+
+.Btn:hover {
+    background-color: var(--background);
+    color: var(--orange);
+}
+
+#gameBoard {
+    /*background-color: red;*/
+    width: 100%;
+    height: 410px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+
+}
+
+#gameBoard>div {
+    width: 33%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: bold;
+    border-right: 2px solid var(--orange);
+    /* background-color: gray;*/
+}
+
+#gameBoard>div:nth-child(-n+6) {
+    border-bottom: 2px solid var(--orange);
+}
+
+#gameBoard>div:nth-child(3n) {
+    border-right: none;
+}
+
+.target-area {
+    display: flex;
+}
+
+.target-area>div {
+    width: 50%;
+}
+
+.target-area .X {
+    border-right: 2px solid var(--orange);
+}
+
+#box {
+    width: calc(100% - 40px);
+    background: var(--background);
+    /*background: #607D8B;*/
+    position: absolute;
+    top: 50%;
+    opacity: .95;
+    border: 2px solid var(--orange);
+    transform: translateY(-50%);
+
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 30px;
+    display: none;
+}

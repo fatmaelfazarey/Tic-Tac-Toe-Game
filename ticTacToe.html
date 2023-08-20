@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ticTacToe.css">
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="continer">
+
+        <div class="text">
+            <h1 id="playerText">X</h1>
+            <div class="target-area">
+                <div class="X">
+                    <h2>X</h2>
+                    <div class="X_target"></div>
+                </div>
+                <div class="O">
+                    <h2 class="o_cpu">O</h2>
+                    <div class="O_target"></div>
+                </div>
+            </div>
+            <button id="restartBtn" class="Btn">Restart</button>
+        </div>
+
+        <!--#gameBoard>.box#$*9-->
+        <div id="gameBoard">
+            <div class="box" id="0" onclick='Game(this.id)'></div>
+            <div class="box" id="1" onclick='Game(this.id)'></div>
+            <div class="box" id="2" onclick='Game(this.id)'></div>
+            <div class="box" id="3" onclick='Game(this.id)'></div>
+            <div class="box" id="4" onclick='Game(this.id)'></div>
+            <div class="box" id="5" onclick='Game(this.id)'></div>
+            <div class="box" id="6" onclick='Game(this.id)'></div>
+            <div class="box" id="7" onclick='Game(this.id)'></div>
+            <div class="box" id="8" onclick='Game(this.id)'></div>
+        </div>
+        <div id="box"></div>
+    </div>
+    <script src="ticTacToe.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ticTacToe.css">
+    <title>Intro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="#">
+</head>
+
+<style>
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .introBtn {
+        width: 70%;
+        margin: auto;
+    }
+
+    .title {
+        margin: 20px auto;
+    }
+
+    .introBtn,
+    .title,
+    .tac {
+        position: relative;
+        top: -500px;
+    }
+
+    .animate {
+        -webkit-animation: move 3s;
+        animation: move 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+    }
+
+    .animate_FrBtn {
+        animation-delay: 2s;
+    }
+
+    .animate_meBtn {
+        animation-delay: 2.5s;
+    }
+
+    .animate_title {
+        animation-delay: 3s;
+    }
+
+    .animate_tac {
+        animation-delay: 3.2s;
+    }
+
+    @keyframes move {
+        0% {
+            top: -500px;
+        }
+
+        25% {
+            top: 10px;
+        }
+
+        40% {
+            top: 0px;
+        }
+
+        100% {
+            top: 0px;
+        }
+    }
+    .link{
+         font-size: 10px;
+         color:var(--main);
+         margin-top: 50px;   
+        }
+</style>
+
+<body>
+
+    <div class="continer intro">
+        <h1 class="title">Tic <span class="tac">Tac</span> Toe</h1>
+
+        <!--<img src="https://img.freepik.com/free-icon/tic-tac-toe_318-622743.jpg?size=626&ext=jpg&ga=GA1.1.1037534795.1685149117&semt=country_rows_v2"
+            alt="Logo" class="logo">-->
+        <button id="PlayWithFriend" class="Btn introBtn friendBtn"
+            onclick="window.open('ticTacToe.html?id=PlayWithFriend','_self')" onmousedown="clickEffect.play()">Play
+            With Friend</button>
+
+        <button id="playWithMe" class="Btn introBtn meBtn" onclick="window.open('ticTacToe.html?id=PlayWithMe','_self')"
+            onmousedown="clickEffect.play()">Play With
+            Me(Easy)</button>
+
+        <button id="PlayWithCPU" class="Btn introBtn cpuBtn"
+            onclick="window.open('ticTacToe.html?id=PlayWithCPU','_self')" onmousedown="clickEffect.play()">Play
+            With CPU(Hard)</button>
+            <a class="link" href="https://github.com/fatmaelfazarey/Tic-Tac-Toe-Game">GitHub</a>
+    </div>
+
+    <script>
+        let cpuBtn = document.querySelector(".cpuBtn");
+        let friendBtn = document.querySelector(".friendBtn");
+        let meBtn = document.querySelector(".meBtn");
+        let title = document.querySelector(".title");
+        let tac = document.querySelector(".tac")
+
+        window.onload = function () {
+            setTimeout(() => {
+                introEffect2.play();
+                introEffect.play();
+            }, 550)
+
+            cpuBtn.classList.add('animate')
+            friendBtn.classList.add('animate', 'animate_FrBtn');
+            meBtn.classList.add('animate', 'animate_meBtn');
+            title.classList.add('animate', 'animate_title');
+            tac.classList.add('animate', 'animate_tac');
+        }
+
+        var clickEffect = new Audio();
+        clickEffect.src = 'clickEffect.wav';
+
+        var introEffect = new Audio();
+        introEffect.src = 'intro1.mp3';
+        var introEffect2 = new Audio();
+        introEffect2.src = 'mixkit-fast-whistle-firework-3103.wav'
+
+
+    </script>
+
+</body>
+
+</html>
